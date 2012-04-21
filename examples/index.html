@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>touchClick</title>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="../src/jquery.touchclick.js"></script>
+    <style>
+    body{
+        margin:50px;
+        padding:0;
+        text-align:center;
+    }
+    .button,
+    .button2{
+        display:inline-block;
+        padding:0.5em 1em;
+        border:1px solid #bbb;
+        border-radius:1em;
+        background:-webkit-gradient(linear,0 0,0 100%,from(#fff),to(#ddd));
+        -webkit-box-shadow:0 1px 1px #bbb,0 3px 1px #ddd;
+        font-weight:bold;
+    }
+    .button.active,
+    .button2.on{
+        -webkit-transform:translate(0,2px);
+        background:-webkit-gradient(linear,0 0,0 100%,from(#eee),to(#ccc));
+        -webkit-box-shadow:0 1px 1px #bbb,0 1px 1px #ddd;
+    }
+    </style>
+</head>
+<body>
+
+<p class="button">Click me!</p>
+<p class="button2">Click me!</p>
+
+<script type="text/javascript">
+    $('.button').touchClick(function(e){
+        console.log('$(\'selector\').touchClick(only-function(){});');
+        console.log(this);
+    });
+    $('.button2').touchClick('on',function(e){
+        console.log('$(\'selector\').touchClick(\'add-className\',function(){});');
+        console.log(this);
+    });
+</script>
+
+</body>
+</html>
