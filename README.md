@@ -4,11 +4,10 @@ Version: 1.0, Last updated: 4/22/2012
 
 This jQuery plugin makes a faster click event for touch screen devices.
 
-## Unuse click event why?
+## Reason not to use the click event
 
 Click event is slow.
 
-## Examples
 
 ### .touchClick( handler(eventObject) )
 
