@@ -58,11 +58,12 @@
                 }
             })
             .bind(touchendEvent, function(e) {
+                var dom = this;
                 if ( this.touchClickStart ) {
                     this.touchClickStart = undefined;
                     $element.removeClass( className );
                     setTimeout(function(){
-                        $.proxy(callback, this)(e)
+                        $.proxy(callback, dom)(e)
                     }, 0);
                 }
             });
