@@ -1,6 +1,6 @@
 /**
  * jQuery touch click - v1.0 - 4/22/2012
- * https://pesblog@github.com/pesblog/jquery-touch-click.git
+ * https://github.com/pesblog/jquery-touch-click
  *
  * Copyright (c) 2012 "pesblog" Noritak Baba
  * Dual licensed under the MIT and GPL licenses.
