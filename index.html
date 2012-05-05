@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>touchClick</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0">
+<meta name="format-detection" content="telephone=no">
+<meta name="description" content="This jQueryPlugin for all touch screen device">
+<meta name="keywords" content="jQuery Plugin,touch,click,touchClick,iPhone,Android,JavaScript">
+<link rel="stylesheet" href="css/style.css" media="screen">
+<body>
+
+<article id="content">
+  <header>
+  </header>
+
+  <section id="top">
+    <div class="read">
+      <h1>touchClick</h1>
+      <p>This jQuery plugin makes for button will want to touch</p>
+      <div class="buttons">
+        <a href="#">Download</a>
+        <a href="#">GitHub</a>
+      </div>
+    </div>
+    <div class="demo">
+      <iframe src="./demo/example1.html" width="420" height="300">
+      <a href="./demo/example1.html">open new tab</a>
+    </div>
+  </section>
+
+  <section id="design">
+    <div class="read">
+      <h2>To design two button</h2>
+      <p>２つのデザインを用意します。</p>
+      <ol>
+        <li>touchしたくなるようなデザイン</li>
+        <li>touchされてヘコんでるデザイン</li>
+      </ol>
+    </div>
+    <div class="sample">
+      <img src="./img/design.png" class="img" alt="two button design">
+    </div>
+  </section>
+
+</article>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="../src/jquery.touchclick.js"></script>
+<script>
+    $('.button').touchClick(function(e){
+        console.log('$(\'selector\').touchClick(only-function(){});');
+        console.log(this);
+    });
+    $('.button2').touchClick('on',function(e){
+        console.log('$(\'selector\').touchClick(\'add-className\',function(){});');
+        console.log(this);
+    }).text('Method Chain OK!');
+</script>
+</body>
+</html>
