@@ -7,6 +7,7 @@
 <meta name="description" content="This jQueryPlugin for all touch screen device">
 <meta name="keywords" content="jQuery Plugin,touch,click,touchClick,iPhone,Android,JavaScript">
 <link rel="stylesheet" href="css/style.css" media="screen">
+<link rel="stylesheet" href="./js/ext/google-code-prettify/prettify.css" media="screen">
 <body>
 
 <article id="content">
@@ -23,7 +24,7 @@
       </div>
     </div>
     <div class="demo">
-      <iframe src="./demo/example1.html" width="420" height="300">
+      <iframe src="./demo/example1.html" width="420" height="300"></iframe>
       <a href="./demo/example1.html">open new tab</a>
     </div>
   </section>
@@ -45,8 +46,11 @@
   <section id="html">
     <div class="read">
       <h2>HTML</h2>
-      <p>HTMLは "button" というclass名だけの要素と、"button active"という2つのclass名を併記した要素をmarkupしてましょう。</p>
-      <pre>&lt;a class="button"&gt;button&lt;/a&gt;
+      <p>HTMLは "button" というclass名だけの要素と、"button active"という2つのclass名を併記した要素をmarkupしてましょう。<br>jQuery本体とtouchclick.jsを読み込むのも忘れずに。</p>
+      <pre class="prettyprint lang-html">&lt;script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="../js/jquery.touchclick.js"&gt;&lt;/script&gt;
+
+&lt;a class="button"&gt;button&lt;/a&gt;
 &lt;a class="button active"&gt;button&lt;/a&gt;</pre>
     </div>
   </section>
@@ -55,7 +59,7 @@
     <div class="read">
       <h2>CSS</h2>
       <p>"button"というclass名を基準に、"button active"のstyleも作成します。</p>
-      <pre>.button{
+      <pre class="prettyprint lang-css">.button{
     display:inline-block;
     padding:0.5em 1em;
     border:1px solid #bbb;
@@ -83,23 +87,31 @@
       0 1px 1px #bbb,0 1px 1px #ddd;
 }
 </pre>
+    </div>
+  </section>
 
+  <section id="javascript">
+    <div class="read">
+      <h2>JavaScript</h2>
+      <p>ここまでくればあとは簡単。<br>touchClickプラグインを適用する JavaScript Code はこれです。</p>
+    <pre class="prettyprint lang-javascript">$('.button').touchClick(function (event) {
+  // your code.
+});</pre>
     </div>
   </section>
 
 </article>
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script type="text/javascript" src="../src/jquery.touchclick.js"></script>
+<script type="text/javascript" src="./js/ext/google-code-prettify/prettify.js"></script>
+<script type="text/javascript" src="./js/jquery.touchclick.js"></script>
 <script>
-    $('.button').touchClick(function(e){
-        console.log('$(\'selector\').touchClick(only-function(){});');
-        console.log(this);
-    });
-    $('.button2').touchClick('on',function(e){
-        console.log('$(\'selector\').touchClick(\'add-className\',function(){});');
-        console.log(this);
-    }).text('Method Chain OK!');
+$('.button').touchClick(function(e){
+    console.log('$(\'selector\').touchClick(only-function(){});');
+    console.log(this);
+});
+
+addEventListener('load', prettyPrint, false);
 </script>
 </body>
 </html>
