@@ -42,6 +42,51 @@
     </div>
   </section>
 
+  <section id="html">
+    <div class="read">
+      <h2>HTML</h2>
+      <p>HTMLは "button" というclass名だけの要素と、"button active"という2つのclass名を併記した要素をmarkupしてましょう。</p>
+      <pre>&lt;a class="button"&gt;button&lt;/a&gt;
+&lt;a class="button active"&gt;button&lt;/a&gt;</pre>
+    </div>
+  </section>
+
+  <section id="css">
+    <div class="read">
+      <h2>CSS</h2>
+      <p>"button"というclass名を基準に、"button active"のstyleも作成します。</p>
+      <pre>.button{
+    display:inline-block;
+    padding:0.5em 1em;
+    border:1px solid #bbb;
+    border-radius:1em;
+    background:
+      -webkit-gradient(
+        linear,0 0,0  100%,
+        from(#fff),
+        to(#ddd));
+    -webkit-box-shadow:
+      0 1px 1px #bbb,0 3px 1px #ddd;
+    box-shadow:
+      0 1px 1px #bbb,0 3px 1px #ddd;
+    font-weight:bold;
+}
+.button.active{
+    -webkit-transform:translate(0,2px);
+    background:
+      -webkit-gradient(
+        linear,0 0,0 100%,
+        from(#eee),to(#ccc));
+    -webkit-box-shadow:
+      0 1px 1px #bbb,0 1px 1px #ddd;
+    box-shadow:
+      0 1px 1px #bbb,0 1px 1px #ddd;
+}
+</pre>
+
+    </div>
+  </section>
+
 </article>
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
