@@ -25,3 +25,8 @@ className to be given between touchClick events is modifiable by [addClassName].
 ### Reason not to use the click event
 
 Click event is slow.
+
+## License
+
+Copyright © 2012 "pesblog" Noritaka Baba   
+Licensed under the MIT license.
