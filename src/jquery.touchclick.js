@@ -60,12 +60,13 @@
                     }else{
                         this.pos = {pageX:e.pageX,pageY:e.pageY};
                     }
-                    e.preventDefault();
                     $element.addClass( className );
                 }
             })
             .bind(touchmoveEvent, function(e) {
                 if ( this.touchClickStart ) {
+                    //prevent scrolling so "clicks" can be aborted by moving the finger off the clickable area.
+                    e.preventDefault();
                     //get the new position. Note: only checks the first finger to touch the screen.
                     var currentPosition = e.originalEvent.changedTouches ? e.originalEvent.changedTouches[0] : e;
                     window.lastTouch = e;
